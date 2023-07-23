@@ -61,7 +61,6 @@ function rate() {
   )
 }
 
-document.querySelector(".initial button").addEventListener("click", rate);
 
 function removeName() {
   document.querySelector(".typename").style.display = "none";
@@ -105,7 +104,6 @@ function sendRate() {
 }
 
 
-document.querySelector(".after button").addEventListener("click", sendRate);
 
 //FIREBASE FUNCTIONS
 let size = 0;
@@ -152,19 +150,22 @@ function createHTMLElement(data) {
     starsElement.appendChild(starElement);
   }
 
+
   totalStars += data.stars;
   avgStars = Math.round(totalStars / size);
 
 
-  itemDiv.appendChild(starsElement);
 
+  itemDiv.appendChild(starsElement);
   const commentElement = document.createElement("h3");
   commentElement.textContent = data.comment;
   itemDiv.appendChild(commentElement);
-
-  const listaItens = document.querySelector(".item-list");
-  listaItens.appendChild(itemDiv);
+  if (document.querySelector(".initial button") != null) {
+    const listaItens = document.querySelector(".item-list");
+    listaItens.appendChild(itemDiv);
+  }
 }
+
 
 function createStars() {
   const starDiv = document.createElement("div");
@@ -180,3 +181,19 @@ function createStars() {
 
 
 getUsersRates();
+
+function goToRate() {
+  location.replace("rate.html");
+}
+
+if (document.querySelector(".rate-button") != null) {
+  document.querySelector(".rate-button").addEventListener("click", goToRate);
+}
+
+if (document.querySelector(".after button") != null) {
+  document.querySelector(".after button").addEventListener("click", sendRate);
+}
+
+if (document.querySelector(".initial button") != null) {
+  document.querySelector(".initial button").addEventListener("click", rate);
+}
