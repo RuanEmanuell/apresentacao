@@ -195,8 +195,6 @@ h1 {
   .presentation {
     margin-top: 20%
   }
-
-  ;
 }
 
 /* RATE SCREEN */
@@ -321,4 +319,11 @@ textarea {
 
 .item h3{
   font-size: 90%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .item{
+    width: 100%;
+  }
 }
