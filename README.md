@@ -1,7 +1,7 @@
 # apresentacao-interesse-conhecimento
 Uma apresentação sobre meu nível de conhecimento e interesse na área de tecnologia. Feito em HTML, CSS e Javascript.
 
-Acesso <a href="https://ruanemanuell.github.io/apresentacao-interesse-conhecimento/">aqui<a>.
+Você precisará de um banco Firebase com uma coleção com o nome de stars para testar a parte de avaliação, mas todo o resto deve funcionar offline normalmente.
 
 Imagens do projeto rodando:
 
